@@ -22,7 +22,6 @@ function assemble(sourceCode) {
             }
         }
     });
-
     // Second pass: Machine code translation
     sourceCode.forEach(line => {
         const cmd = parser.parse(line);
@@ -43,8 +42,7 @@ function readSourceFile(filename) {
 function writeOutputFile(assemblyCode, filename) {
     const baseName = path.basename(filename, ".asm");
     let file = fs.createWriteStream(`${baseName}.hack`);
-    file.on('error', function(err) { /* error handling */ });
-    assemblyCode.forEach(function(v) { file.write(v + '\r\n'); });
+    assemblyCode.forEach(v => file.write(v + "\r\n"));
     file.end();
 };
 

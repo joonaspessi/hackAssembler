@@ -10,7 +10,6 @@ function parse(line) {
             type: "EMPTY"
         }
     } else {
-        // A command
         if (_isA(lineTrimmed)) {
             return _parseA(lineTrimmed);
         } else if(_isL(lineTrimmed)) {
@@ -32,8 +31,6 @@ function _isL(line) {
 function _parseA(line) {
     // strip @ from beginning;
     const symbol = line.slice(1);
-    //const binaryNumber15 = pad(binaryNumber, 15);
-    // const cmd =
     return {
         type: "A",
         symbol: symbol
