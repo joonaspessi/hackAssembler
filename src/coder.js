@@ -1,4 +1,4 @@
-const CINS = require("../constants/cInstructions.js");
+const CINS = require("../constants/cIns.js");
 const path = require("path");
 
 function code(cmd, symbolTable) {
