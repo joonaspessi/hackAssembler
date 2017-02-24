@@ -6,8 +6,6 @@ function code(cmd, symbolTable) {
         return _codeA(cmd, symbolTable);
     } else if (cmd.type === "C") {
         return _codeC(cmd, symbolTable);
-    } else if (cmd.type === "L") {
-        return "@todo";
     }
 }
 
