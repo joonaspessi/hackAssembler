@@ -15,11 +15,11 @@ function readOutputFile(filename) {
     const sourceCode = fileData.split("\n").filter(val => val !== "");
     return sourceCode;
 }
-const addSource2 = readSourceFile(path.join(path.dirname(__filename), "../../add/Add.asm"));
-const addOutput2 = readOutputFile(path.join(path.dirname(__filename), "../../add/Add.hack"));
+const source = readSourceFile(path.join(path.dirname(__filename), "../../add/Add.asm"));
+const output = readOutputFile(path.join(path.dirname(__filename), "../../add/Add.hack"));
 
 describe('Add assembly', function() {
     it("should produce correct machine codes", () => {
-        assembler.assemble(addSource2).should.deep.equal(addOutput2);
+        assembler.assemble(source).should.deep.equal(output);
     });
 });
