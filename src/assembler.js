@@ -4,7 +4,6 @@ const coder = require("./coder.js");
 const SymbolTable = require("./symbolTable");
 const path = require("path");
 
-
 function assemble(sourceCode) {
     let romCounter = 0;
     let output = [];
