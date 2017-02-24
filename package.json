@@ -17,5 +17,8 @@
     "test": "npm run test"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "bin": {
+    "hackassembler": "index.js"
+  }
 }
